@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>라디언스_Redisign</title>
+    <style>
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 400;
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 700;
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+        }
+
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 300;
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+        }
+
+        .nanumbarungothic * {
+            font-family: 'NanumBarunGothic', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            color: #4c4444;
+            line-height: 1;
+            font-family: 'NanumBarunGothic';
+            font-weight: 400;
+            min-width: 1920px;
+        }
+
+        header {
+            height: 60px;
+        }
+
+
+        header .inner {
+            height: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .inner img {
+            margin-left: 53px;
+        }
+
+        header .inner .right_menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .inner .right_menu li:nth-child(1) {
+            background-color: #b3afa3;
+            padding: 7px 12px 9px 10px;
+        }
+
+        header .inner .right_menu li:nth-child(1) img {
+            margin-left: 20px;
+        }
+
+        header .inner .right_menu li:nth-child(2) img {
+            margin: 0 20px 0 38px;
+        }
+
+        header .inner .right_menu li:nth-child(3) img {
+            margin-right: 20px;
+        }
+
+        header .inner .right_menu li:nth-child(4) img {
+            margin-right: 43px;
+        }
+
+        header .inner nav ul {
+            display: flex;
+
+        }
+
+        header .inner nav ul li {
+            margin: 0 30px;
+
+
+        }
+
+
+
+        .main_visual {
+            display: flex;
+            height: 970px;
+            width: calc(100%)
+        }
+
+        .main_visual div {
+            width: 760px;
+            padding: 125px 0 346px;
+            background-color: #b3afa3;
+        }
+
+        .main_visual div h3 {
+            font-size: 60px;
+            margin-left: 145px;
+        }
+
+        .main_visual div strong {
+            font-size: 40px;
+            /* padding: 289px 0 0 145px; */
+            margin-left: 145px;
+            margin-top: 289px;
+            display: block;
+        }
+
+        .story {
+            padding: 150px 247px;
+        }
+
+        .story .inner h3 {
+            font-size: 38px;
+            padding-bottom: 80px;
+        }
+
+        .story .inner .list .item {
+            position: relative;
+        }
+
+        .story .inner .list .item .g {
+            padding: 32px 0 0 114px;
+        }
+
+        .story .inner .list .item div img {
+            width: 906px;
+            height: 526px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: aliceblue;
+        }
+
+        .story .inner .list .item div .tem1 {
+            background-color: #f3f3f3;
+            width: 566px;
+            height: 460px;
+            position: absolute;
+            top: 100px;
+            right: 0;
+        }
+
+        .story .inner .list .item div .tem1 p:nth-child(1) {
+            font-size: 18px;
+            opacity: 45%;
+            padding: 80px 0 19px 66px;
+            font-weight: bold;
+        }
+
+        .story .inner .list .item div .tem1 h3 {
+            font-size: 30px;
+            padding: 0px 0 24px 66px;
+        }
+
+        .story .inner .list .item div .tem1 strong {
+            padding-left: 66px;
+            font-size: 18px;
+            display: block;
+        }
+
+        .story .inner .list .item div .tem1 p:nth-child(4) {
+            margin: 35px 0 0 66px;
+            border: solid 1px #858585;
+            border-radius: 20px;
+            width: 160px;
+            height: 53px;
+            line-height: 53px;
+            padding-left: 23px;
+            font-weight: bold;
+
+        }
+
+        .results {
+            padding: 150px 0px;
+        }
+
+        .results .inner img {
+            margin-left: 247px;
+        }
+
+        .pick {
+            padding: 0 247px;
+        }
+
+        .pick .inner {
+            position: relative;
+
+        }
+
+        .pick .inner h3 {
+            font-size: 38px;
+            margin-bottom: 251px;
+        }
+
+        .pick .inner div img {
+            margin-left: 390px;
+            padding-bottom: 212px;
+
+        }
+
+        .pick .inner div p {
+            font-size: 48px;
+            color: red;
+
+        }
+
+        .pick .inner div p:nth-child(2) {
+            padding: 13px 68px 13px 55px;
+            background-color: #1b8546;
+            border-radius: 20px;
+            color: white;
+            width: 369px;
+            margin-bottom: 50px;
+            position: absolute;
+            top: 259px;
+            right: 50px;
+        }
+
+        .pick .inner div p:nth-child(3) {
+            padding: 13px 29px 13px 39px;
+            background-color: #1b8546;
+            border-radius: 20px;
+            color: white;
+            width: 369px;
+            position: absolute;
+            top: 400px;
+            right: 50px;
+        }
+
+        .pick .inner div p:nth-child(4) {
+            position: absolute;
+            top: 400px;
+            left: 50px;
+        }
+
+        .gift .inner {
+            width: 1424px;
+            height: 140px;
+            background-color: #5fa9fc;
+            margin-left: 247px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .gift .inner strong {
+            margin-left: 397px;
+            font-size: 24px;
+            display: block;
+        }
+
+        .gift .inner h3 {
+            margin-left: 18px;
+            font-size: 38px;
+            -webkit-text-stroke: 1px white;
+        }
+
+        .gift .inner div img {
+            margin-left: 106px;
+        }
+
+
+
+        .product .inner {
+            padding: 212px 247px 150px 247px;
+            text-align: center;
+        }
+
+        .product .inner h3 {
+            font-size: 38px;
+            text-align: center;
+        }
+
+        .product .inner strong {
+
+            font-size: 20px;
+            display: block;
+            text-align: center;
+
+            margin: 25px auto 60px auto;
+            color: #333;
+            background-color: #5f6f81;
+            width: 248px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 20px;
+
+        }
+
+        .product .inner .list {
+            display: flex;
+            justify-content: space-between;
+            width: 1424px;
+            margin: 0 auto;
+        }
+
+        .rivew {
+            padding: 0 247px 150px 247px;
+
+
+        }
+
+        .rivew .inner {
+            width: 1424px;
+            
+
+        }
+
+
+        .rivew .inner h3 {
+            font-size: 38px;
+            margin-bottom: 40px;
+        }
+
+        .rivew .inner .list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rivew .inner .list .item div img {
+            margin-bottom: 40px;
+        }
+
+        .rivew .inner .list .item div p {
+            font-size: 16px;
+        }
+
+        .service {
+            padding: 0 130px 150px 247px;
+        }
+
+        .service .inner {
+            width: 1544px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .service .inner h3 {
+            font-size: 38px;
+            margin-bottom: 50px;
+        }
+
+        .service .inner .list .c {
+            background-color: #f4f4f4;
+            padding: 50px 0 67px 48px;
+            margin-bottom: 24px;
+            border-radius: 20px;
+            width: 500px;
+            height: 200px
+            
+        }
+        
+        .service .inner .list .d {
+            background-color: #f4f4f4;
+            padding: 57px 0 65px 47px;
+            border-radius: 20px;
+            width: 500px;
+            height: 200px
+            
+        }
+
+        .service .inner .list .a {
+            background-color: #f4f4f4;
+            margin-left: 0 0 23px 760px;
+            margin-bottom: 24px;
+            padding: 57px 28px 8px 50px;
+            border-radius: 20px;
+            width: 500px;
+            height: 200px
+                           
+        }
+
+        .service .inner .list .ab {
+            margin-right: 25px;
+        }
+
+        .service .inner .list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .service .inner .list p {
+            margin-bottom: 32px;
+        }
+
+        .service .inner .list .b {
+            background-color: #f4f4f4;
+           
+            padding: 57px 28px 8px 50px;
+            border-radius: 20px;
+            width: 500px;
+            height: 200px
+        }
+
+        .service .inner .list .item {
+            font-size: 20px;
+        }
+
+        .service .inner .list .tem {
+            font-size: 33px;
+            display: flex;
+        }
+
+        .service .inner .list .tem strong {
+            margin-right: 66px;
+        }
+
+        .footer {
+            background-color: #4c4444;
+            height: 377px;
+            color: white;
+        }
+
+        .footer .inner {
+            position: relative
+        }
+
+        .footer .inner ul {
+            display: flex;
+            align-items: center;
+            padding: 28px 0 0 390px;
+        }
+
+        .footer .inner ul li {
+            margin-right: 50px;
+        }
+
+        .footer .inner p {
+            margin: 166px 0 0 390px ;
+        }
+
+        .footer .inner span {
+            padding: 166px 0 180px 390px ;
+        }
+        
+        .footer .inner .item ul {
+            position: absolute;
+            top: 150px;
+            right: 155px;
+        }
+
+        .footer .inner .item div strong {
+            position: absolute;
+            top: 45px;
+            right: 360px;
+        }
+        .footer .inner .item div span {
+            position: absolute;
+            top: -80px;
+            right: 335px;
+        }
+
+        .footer .inner .item div p {
+            position: absolute;
+            top: -50px;
+            right: 275px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#"><img src="img/logo.png" alt="라디언스로고"></a>
+            </h1>
+            <nav>
+                <ul>
+                    <li>숙면의가치</li>
+                    <li>더블이벤트</li>
+                    <li>스토어</li>
+                    <li>고객지원</li>
+                    <li>실사용후기</li>
+                    <li>기술</li>
+
+                </ul>
+            </nav>
+            <ul class="right_menu">
+                <li>검색어를입력하세요<img src="img/icon1.png" alt="검색"></li>
+                <li><img src="img/icon2.png" alt="사용자"></li>
+                <li><img src="img/icon3.png" alt="배송"></li>
+                <li><img src="img/icon4.png" alt="쇼핑바구니"></li>
+            </ul> <!-- .right menu end -->
+        </div> <!-- .inner end -->
+    </header>
+
+    <section class="main_visual">
+        <div>
+            <h3>더 좋은 열로,<br />더 좋은 삶을 만들다</h3>
+            <strong>따뜻함을 넘어<br />숙면의 가치를 만듭니다</strong>
+        </div>
+        <img src="img/01.png" alt="메인비주얼이미지">
+    </section> <!-- .main_visual end -->
+
+    <section class="story">
+        <div class="inner">
+            <h3>story</h3>
+            <div class="list">
+                <div class="item">
+                    <img class="g" src="img/story02.png" alt="그라데이션">
+                    <div>
+                        <img src="img/story01.png" alt="침대위잠자는여자">
+                        <div class="tem1">
+                            <p>라디클래식 loT 숙면매트</p>
+                            <h3>잠 못 이루는 밤에는 라디클래식</h3>
+                            <strong>잠은 안 오고 이리저리 뒤척이는 밤,<br />라디클래식 loT 숙면매트를 켜보세요!</strong>
+                            <p>MORE VIEW +</p>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div> <!-- .item end -->
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .story end -->
+
+    <section class="results">
+        <div class="inner">
+            <div>
+                <img src="img/results01.png" alt="연구결과이미지">
+            </div>
+        </div> <!-- .inner end -->
+    </section> <!-- .results end -->
+
+    <section class="pick">
+        <div class="inner">
+            <h3>라디언스 P!CK</h3>
+            <div>
+                <img src="img/pick01.png" alt="라디언스제품사진">
+                <p>#선착순특가</p>
+                <p>#라디언스 회춘</p>
+                <p>“<br />원적외선 마사지기 1+1<br />Big Sale</p>
+            </div>
+        </div> <!-- .inner end -->
+    </section> <!-- .pick end -->
+
+    <section class="gift">
+        <div class="inner">
+            <strong>라디언스 신규 회원 가입 시</strong>
+            <h3>푸짐한 혜택이 가득!</h3>
+            <div>
+                <img src="img/gift01.png" alt="선물이미지">
+            </div>
+        </div> <!-- .inner end -->
+    </section> <!-- .gift end -->
+
+    <section class="product">
+        <div class="inner">
+            <h3>나에게 맞는 제품이 고민된다면?</h3>
+            <strong>내게 맞는 제품 찾아보기</strong>
+            <div class="list">
+                <div class="item">
+                    <ul>
+                        <li><img src="img/product01.png" alt="라디언스 제품이미지"></li>
+                    </ul>
+                </div> <!-- .item 1 end -->
+                <div class="item">
+                    <ul>
+                        <li><img src="img/product02.png" alt="라디언스 제품이미지"></li>
+                    </ul>
+                </div> <!-- .item 2 end -->
+                <div class="item">
+                    <ul>
+                        <li><img src="img/product03.png" alt="라디언스 제품이미지"></li>
+                    </ul>
+                </div> <!-- .item 3 end -->
+                <div class="item">
+                    <ul>
+                        <li><img src="img/product04.png" alt="라디언스 제품이미지"></li>
+                    </ul>
+                </div> <!-- .item 4 end -->
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .product end -->
+
+    <section class="rivew">
+        <div class="inner">
+            <h3>Best R!vew</h3>
+            <div class="list">
+
+                <div class="item">
+                    <div>
+                        <img src="img/rivew01.png" alt="라디언스제품이미지">
+                        <p>“<br />
+                            저는 추운 지역에 살고 있는데 잠잘 때면<br />
+                            와이프의 항상 손발이 저의 등밑에 넣고<br />
+                            따뜻함을 느끼는 와이프를 위해 숙면매트를<br />
+                            구입했습니다.</p>
+                    </div>
+                </div> <!-- .item 1 end  -->
+                <div class="item">
+                    <div>
+                        <img src="img/rivew02.png" alt="라디언스제품이미지">
+                        <p>“<br />
+                            솔직후기입니다 ^^ 벌써 3개째구매했고<br />
+                            제가 사용해보고애들 싱글로 두개 구입했어요<br />
+                            매트랑 이불이랑 같이 애들이 너무<br />
+                            따뜻하고 좋다고 하네요</p>
+                    </div>
+                </div> <!-- .item 2 end  -->
+                <div class="item">
+                    <div>
+                        <img src="img/rivew03.png" alt="라디언스제품이미지">
+                        <p>“<br />
+                            저는 신경계에 문제가 있어서 전자파에<br />
+                            굉장히 예민한데요, 일반 전기장판 깔고<br />
+                            자면 신경이 자극돼서 아예 잠을 못자요 ㅠㅠ<br />
+                            한겨울 난방을 틀어도 추울 때는 패딩까지..
+                        </p>
+                    </div>
+                </div> <!-- .item 3 end  -->
+                <div class="item">
+                    <div>
+                        <img src="img/rivew04.png" alt="라디언스제품이미지">
+                        <p>“<br />
+                            이미 일주일동안 매트리스 패드 밑에.<br />
+                            온열매트를 깔고 사용하고 있는 상태라 ㅋㅋㅋ<br />
+                            사진의 예의상 살짝 찍어봤습니다. 우선 디자인과<br />
+                            생상은 진회색의 안정감..</p>
+                    </div>
+                </div> <!-- .item 4 end  -->
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .rivew end -->
+
+    <section class="service">
+        <div class="inner">
+            <h3>이런 서비스 찾고 계신가요?</h3>
+            <div class="list">
+                
+                <div class="ab">
+                    <div class="a">
+                        <div class="item">
+                            <p>상품 구매시</p>
+                        </div> <!-- .item 1 end -->
+    
+                        <div class="tem">
+                            <strong>1~3% 적립금 지급</strong>
+                            <img src="img/service01.png" alt="사람아이콘">
+                        </div> <!-- .tem 1 end -->
+                    </div>
+    
+                    <div class="b">
+                        <div class="item">
+                            <p>카카오톡 채널 추가 시</p>
+                        </div> <!-- .item 2 end -->
+    
+                        <div class="tem">
+                            <strong>6,000원 추가 할인</strong>
+                            <img src="img/service02.png" alt="카톡아이콘">
+                        </div>
+                    </div><!-- .tem 2end -->
+                </div> <!-- ab end -->
+                
+                <div class="cd">
+                    <div class="c">
+                        <div class="item">
+                            <p>최초 포토리뷰 작성 시</p>
+                        </div> <!-- .item 3 end -->
+    
+                        <div class="tem">
+                            <strong>5,000원 적립금 지급</strong>
+                            <img src="img/service03.png" alt="카메라아이콘">
+                        </div>
+                    </div>
+                    
+                    <div class="d">
+                        <div class="item">
+                            <p>베스트리뷰 작성 시</p>
+                        </div> <!-- .item 4 end -->
+    
+                        <div class="tem">
+                            <strong>적립금 또는 경품 증정</strong>
+                            <img src="img/service04.png" alt="따봉아이콘">
+                        </div>
+                    </div>
+                </div> <!-- .cd end -->
+                
+
+                
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .service end -->
+
+    <section class="footer">
+        <div class="inner">
+            <ul>
+                <li><img src="img/footer01.png" alt="라디언스로고"></li>
+                <li>공지사항</li>
+                <li>문의사항</li>
+                <li>계좌정보</li>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>이용안내</li>
+                <li>IR공지</li>
+            </ul>
+            <p>상호:라디언스(주) 대표자:김세영 사업자번호:810-88-00308 통신판매신고번호:제 2020-성남수정-0919호[사업자정보확인]</p>
+            <span>주소:경기도 성남시 수정구 창업로 54,5F 반송지 주소:경기도 광주시 도척면 도척윗로 728-18(상림리 18-1) 개인정보 보호 책임자:김세영</span>
+            
+            <div class="item">
+                <div>
+                    <strong>고객센터</strong>  
+                    <span>1522-8888</span>
+                    <p>월-금.09:00 - 18:00<br/>
+                    점-심.12:00 - 13:00</p>
+                </div>
+                
+                <ul>
+                    <li><img src="img/footer02.png" alt="페이스북아이콘"></li>
+                    <li><img src="img/footer03.png" alt="인스타그램아이콘"></li>
+                    <li><img src="img/footer04.png" alt="블로그아이콘"></li>
+                    
+                </ul>
+            </div> <!-- .item end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .footer -->
+</body>
+
+</html>
